@@ -248,6 +248,26 @@
     vertical-align: middle;
   }
   html[lang="ar"] .event .tent { font-size: 13px; font-weight: 500; }
+  .event .tent.conf { background: var(--sage); color: var(--sage-deep); }
+  .event .notes {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    color: var(--ink-soft);
+    font-size: .88em;
+    line-height: 1.55;
+  }
+  .event .notes li { position: relative; padding-inline-start: 14px; }
+  .event .notes li + li { margin-top: 4px; }
+  .event .notes li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: .62em;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--blush-deep);
+  }
   .event .venue { margin: 0; color: var(--ink-soft); flex: 1; }
   .event a {
     margin-top: 12px;
@@ -337,8 +357,12 @@
       <div class="event">
         <p class="who" data-i="womenWho"></p>
         <h2 data-i="womenTitle"></h2>
-        <p class="when"><span data-i="womenWhen"></span><span class="tent" data-i="tentative"></span></p>
+        <p class="when"><span data-i="womenWhen"></span><span class="tent conf" data-i="confirmed"></span></p>
         <p class="venue" data-i="womenVenue"></p>
+        <ul class="notes">
+          <li data-i="womenNote1"></li>
+          <li data-i="womenNote2"></li>
+        </ul>
         <a href="https://maps.app.goo.gl/FHG4243zNUd84cKh9" target="_blank" rel="noopener" data-i="map"></a>
       </div>
     </div>
@@ -364,9 +388,11 @@
       menWhen: 'الساعة ٧:٠٠ مساءً',
       menVenue: 'كافيه ومنتزه البستان، داريا',
       womenWho: 'حفل النساء', womenTitle: 'الثلاثاء ٢٢ أيلول',
-      womenWhen: 'الساعة ٧:٠٠ مساءً',
+      womenWhen: 'من ٧:٠٠ إلى ١٠:٠٠ مساءً',
       womenVenue: 'قصر اليزن للمناسبات، داريا',
-      tentative: 'قد يتغيّر', map: 'الموقع على الخريطة ←',
+      tentative: 'قد يتغيّر', confirmed: 'موعد مؤكّد', map: 'الموقع على الخريطة ←',
+      womenNote1: 'لن يدخل العريس حفل النساء.',
+      womenNote2: 'نعتذر عن اصطحاب الأطفال.',
       notice: 'المواعيد أولية وقد تتغيّر قليلاً. هذه الصفحة تُحدَّث دائماً، فعودوا إليها قبل الموعد.',
       closing: 'ننتظر لقاءكم بفارغ الصبر',
       footer: 'عبيدة ومودّة · أيلول ٢٠٢٦'
@@ -384,9 +410,11 @@
       menWhen: '7:00 PM',
       menVenue: 'Al‑Bostan Café & Park, Daraya',
       womenWho: "Women's celebration", womenTitle: 'Tuesday, September 22',
-      womenWhen: '7:00 PM',
+      womenWhen: '7:00 – 10:00 PM',
       womenVenue: 'Al‑Yazan Palace for Events, Daraya',
-      tentative: 'may change', map: 'Open in Maps →',
+      tentative: 'may change', confirmed: 'confirmed', map: 'Open in Maps →',
+      womenNote1: 'The groom will not enter the women’s celebration.',
+      womenNote2: 'Kindly, no children.',
       notice: 'Times are tentative and may shift slightly. This page is kept up to date, so check back before the day.',
       closing: 'We can’t wait to see you there',
       footer: 'Obeida & Mawadah · September 2026'
