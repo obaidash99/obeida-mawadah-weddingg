@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Obeida & Mawadah — wedding invitation, September 21–22, 2026, Daraya">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%92%90%3C/text%3E%3C/svg%3E">
+<title>Obeida & Mawadah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --cream: #FBF6F2;
+    --paper: #FFFCFA;
+    --blush: #F3D6D9;
+    --blush-deep: #E4B7BD;
+    --rose: #C4788A;
+    --rose-ink: #9E5A6B;
+    --sage: #9DB09A;
+    --sage-deep: #4E6B55;
+    --ink: #3D3838;
+    --ink-soft: #7A6E6E;
+    --line: #EBDCD8;
+    --display-en: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+    --display-ar: 'Amiri', 'Scheherazade New', 'Times New Roman', serif;
+    --body-en: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+    --body-ar: 'Tajawal', 'Segoe UI', Tahoma, system-ui, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--cream); }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--body-en);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(ellipse 60% 40% at 15% 0%, rgba(243,214,217,.55), transparent 70%),
+      radial-gradient(ellipse 50% 40% at 90% 100%, rgba(157,176,154,.35), transparent 70%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  html[lang="ar"] body { font-family: var(--body-ar); font-size: 18px; }
+
+  .lang-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 18px 22px 0;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .lang-toggle {
+    display: inline-flex;
+    border: 1px solid var(--blush-deep);
+    border-radius: 999px;
+    background: var(--paper);
+    padding: 3px;
+    gap: 2px;
+  }
+  .lang-toggle button {
+    border: 0;
+    background: transparent;
+    color: var(--ink-soft);
+    font: 600 14px/1 var(--body-en);
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    letter-spacing: .04em;
+  }
+  .lang-toggle button[data-l="ar"] { font-family: var(--body-ar); font-size: 15px; }
+  .lang-toggle button[aria-pressed="true"] { background: var(--rose); color: #fff; }
+  .lang-toggle button:focus-visible { outline: 2px solid var(--sage-deep); outline-offset: 2px; }
+
+  main {
+    max-width: 680px;
+    margin: 18px auto 64px;
+    padding: 0 20px;
+  }
+
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 52px 36px 44px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 24px 60px -30px rgba(158,90,107,.28);
+    animation: rise .9s ease-out both;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid var(--blush);
+    border-radius: 14px;
+    pointer-events: none;
+  }
+  @keyframes rise { from { opacity: .001; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .card { animation: none; } }
+
+  .sprig { display: block; margin: 0 auto 8px; color: var(--sage); }
+
+  .eyebrow {
+    margin: 0;
+    color: var(--sage-deep);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+  }
+  html[lang="ar"] .eyebrow { letter-spacing: 0; font-size: 15px; font-weight: 500; }
+
+  .names {
+    margin: 18px 0 6px;
+    font-family: var(--display-en);
+    font-weight: 500;
+    font-size: clamp(44px, 9vw, 72px);
+    line-height: 1.05;
+    color: var(--rose-ink);
+    text-wrap: balance;
+  }
+  html[lang="ar"] .names { font-family: var(--display-ar); font-size: clamp(46px, 9.5vw, 78px); line-height: 1.25; }
+  .names .amp {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    font-size: .48em;
+    color: var(--rose);
+    margin: 4px 0;
+  }
+  html[lang="ar"] .names .amp { font-style: normal; font-size: .5em; }
+
+  .lede {
+    margin: 14px auto 0;
+    max-width: 30em;
+    color: var(--ink-soft);
+    font-size: 1.05em;
+  }
+
+  .date-line {
+    margin: 30px 0 0;
+    font-family: var(--display-en);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  html[lang="ar"] .date-line { font-family: var(--display-ar); font-size: 28px; }
+  .place-line { margin: 4px 0 0; color: var(--ink-soft); }
+
+  .rule {
+    display: flex; align-items: center; gap: 14px;
+    margin: 34px 0 26px; color: var(--blush-deep);
+  }
+  .rule::before, .rule::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .rule svg { color: var(--sage); }
+
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .unit {
+    background: var(--blush);
+    border-radius: 14px;
+    padding: 14px 6px 12px;
+  }
+  .unit b {
+    display: block;
+    font: 600 34px/1 var(--display-en);
+    font-variant-numeric: tabular-nums;
+    color: var(--rose-ink);
+  }
+  html[lang="ar"] .unit b { font-family: var(--display-ar); font-size: 32px; }
+  .unit span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--rose-ink);
+  }
+  html[lang="ar"] .unit span { letter-spacing: 0; font-size: 14px; font-weight: 500; }
+  .unit { min-width: 0; }
+  @media (max-width: 520px) {
+    .countdown { gap: 8px; }
+    .unit { padding: 12px 4px 10px; border-radius: 12px; }
+    .unit b { font-size: clamp(24px, 7.5vw, 34px); }
+    .unit span { font-size: clamp(8.5px, 2.5vw, 12px); letter-spacing: .05em; margin-top: 5px; }
+    html[lang="ar"] .unit b { font-size: clamp(24px, 7.5vw, 32px); }
+    html[lang="ar"] .unit span { font-size: clamp(11px, 3.2vw, 14px); letter-spacing: 0; }
+  }
+  .count-note { margin: 12px 0 0; color: var(--ink-soft); font-size: .92em; }
+  .count-done {
+    display: none;
+    font-family: var(--display-en);
+    font-size: 30px;
+    color: var(--rose-ink);
+    margin: 0;
+  }
+  html[lang="ar"] .count-done { font-family: var(--display-ar); }
+  .is-done .countdown, .is-done .count-note { display: none; }
+  .is-done .count-done { display: block; }
+
+  .events {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 26px;
+    text-align: start;
+  }
+  @media (max-width: 560px) { .events { grid-template-columns: 1fr; } }
+  .event {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 22px 20px;
+    background: var(--cream);
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .event .who {
+    margin: 0;
+    font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--sage-deep);
+  }
+  html[lang="ar"] .event .who { letter-spacing: 0; font-size: 14px; font-weight: 500; }
+  .event h2 {
+    margin: 2px 0 0;
+    font-family: var(--display-en);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  html[lang="ar"] .event h2 { font-family: var(--display-ar); font-size: 26px; }
+  .event .when { margin: 0; color: var(--ink); font-weight: 600; }
+  .event .tent {
+    display: inline-block;
+    margin-inline-start: 6px;
+    font-size: 12px; font-weight: 700;
+    padding: 2px 8px; border-radius: 999px;
+    background: var(--blush); color: var(--rose-ink);
+    vertical-align: middle;
+  }
+  html[lang="ar"] .event .tent { font-size: 13px; font-weight: 500; }
+  .event .venue { margin: 0; color: var(--ink-soft); flex: 1; }
+  .event a {
+    margin-top: 12px;
+    align-self: flex-start;
+    color: var(--sage-deep);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--sage);
+    padding-bottom: 1px;
+  }
+  .event a:hover { color: var(--rose-ink); border-color: var(--rose); }
+  .event a:focus-visible { outline: 2px solid var(--sage-deep); outline-offset: 3px; border-radius: 3px; }
+
+  .notice {
+    margin: 26px auto 0;
+    max-width: 34em;
+    color: var(--ink-soft);
+    font-size: .92em;
+  }
+  .closing {
+    margin: 34px 0 0;
+    font-family: var(--display-en);
+    font-style: italic;
+    font-size: 24px;
+    color: var(--rose-ink);
+    text-wrap: balance;
+  }
+  html[lang="ar"] .closing { font-family: var(--display-ar); font-style: normal; font-size: 26px; }
+
+  footer { text-align: center; color: var(--ink-soft); font-size: 14px; margin-top: 26px; }
+</style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button type="button" data-l="ar" aria-pressed="true">العربية</button>
+    <button type="button" data-l="en" aria-pressed="false">English</button>
+  </div>
+</div>
+
+<main>
+  <article class="card" id="card">
+    <svg class="sprig" width="72" height="34" viewBox="0 0 72 34" fill="none" aria-hidden="true">
+      <path d="M4 30 C 20 12, 40 8, 68 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M14 22 c -2 -8 4 -12 8 -12 c 1 6 -3 11 -8 12z" fill="currentColor"/>
+      <path d="M26 15 c -1 -8 6 -12 10 -11 c 0 6 -5 10 -10 11z" fill="currentColor"/>
+      <path d="M40 10 c 0 -8 7 -11 11 -10 c -1 6 -6 9 -11 10z" fill="currentColor"/>
+      <path d="M22 26 c 4 -6 11 -6 14 -3 c -4 4 -10 5 -14 3z" fill="currentColor" opacity=".7"/>
+      <path d="M36 20 c 5 -5 11 -4 14 -1 c -5 4 -10 4 -14 1z" fill="currentColor" opacity=".7"/>
+    </svg>
+
+    <p class="eyebrow" data-i="eyebrow"></p>
+    <h1 class="names">
+      <span data-i="name1"></span>
+      <span class="amp" data-i="amp"></span>
+      <span data-i="name2"></span>
+    </h1>
+    <p class="lede" data-i="lede"></p>
+
+    <p class="date-line" data-i="dates"></p>
+    <p class="place-line" data-i="place"></p>
+
+    <div class="rule" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 18 18"><path d="M9 1 C 9 6, 6 9, 1 9 C 6 9, 9 12, 9 17 C 9 12, 12 9, 17 9 C 12 9, 9 6, 9 1z" fill="currentColor"/></svg>
+    </div>
+
+    <section id="count-wrap" aria-live="polite">
+      <div class="countdown">
+        <div class="unit"><b id="d">—</b><span data-i="days"></span></div>
+        <div class="unit"><b id="h">—</b><span data-i="hours"></span></div>
+        <div class="unit"><b id="m">—</b><span data-i="minutes"></span></div>
+        <div class="unit"><b id="s">—</b><span data-i="seconds"></span></div>
+      </div>
+      <p class="count-note" data-i="countNote"></p>
+      <p class="count-done" data-i="countDone"></p>
+    </section>
+
+    <div class="events">
+      <div class="event">
+        <p class="who" data-i="menWho"></p>
+        <h2 data-i="menTitle"></h2>
+        <p class="when"><span data-i="menWhen"></span><span class="tent" data-i="tentative"></span></p>
+        <p class="venue" data-i="menVenue"></p>
+        <a href="https://maps.app.goo.gl/N8gzDbFjwctQJm5BA" target="_blank" rel="noopener" data-i="map"></a>
+      </div>
+      <div class="event">
+        <p class="who" data-i="womenWho"></p>
+        <h2 data-i="womenTitle"></h2>
+        <p class="when"><span data-i="womenWhen"></span><span class="tent" data-i="tentative"></span></p>
+        <p class="venue" data-i="womenVenue"></p>
+        <a href="https://maps.app.goo.gl/FHG4243zNUd84cKh9" target="_blank" rel="noopener" data-i="map"></a>
+      </div>
+    </div>
+
+    <p class="notice" data-i="notice"></p>
+    <p class="closing" data-i="closing"></p>
+  </article>
+  <footer data-i="footer"></footer>
+</main>
+
+<script>
+  const T = {
+    ar: {
+      eyebrow: 'بكل الحب، ندعوكم لمشاركتنا فرحتنا',
+      name1: 'عبيدة', amp: 'و', name2: 'مودّة',
+      lede: 'يسرّنا أن نجتمع بكم في حفل زفافنا. حضوركم يكمل فرحتنا.',
+      dates: 'الإثنين والثلاثاء ٢١ – ٢٢ أيلول ٢٠٢٦',
+      place: 'داريا، ريف دمشق',
+      days: 'يوم', hours: 'ساعة', minutes: 'دقيقة', seconds: 'ثانية',
+      countNote: 'حتى نلتقي بكم',
+      countDone: 'تم العرس بحمد الله ',
+      menWho: 'حفل الرجال', menTitle: 'الإثنين ٢١ أيلول',
+      menWhen: 'الساعة ٧:٠٠ مساءً',
+      menVenue: 'كافيه ومنتزه البستان، داريا',
+      womenWho: 'حفل النساء', womenTitle: 'الثلاثاء ٢٢ أيلول',
+      womenWhen: 'الساعة ٧:٠٠ مساءً',
+      womenVenue: 'قصر اليزن للمناسبات، داريا',
+      tentative: 'قد يتغيّر', map: 'الموقع على الخريطة ←',
+      notice: 'المواعيد أولية وقد تتغيّر قليلاً. هذه الصفحة تُحدَّث دائماً، فعودوا إليها قبل الموعد.',
+      closing: 'ننتظر لقاءكم بفارغ الصبر',
+      footer: 'عبيدة ومودّة · أيلول ٢٠٢٦'
+    },
+    en: {
+      eyebrow: 'With love, you are invited to celebrate with us',
+      name1: 'Obeida', amp: '&', name2: 'Mawadah',
+      lede: 'We would be delighted to have you join us at our wedding. Your presence completes our joy.',
+      dates: 'Monday & Tuesday, September 21 – 22, 2026',
+      place: 'Daraya, Damascus countryside',
+      days: 'days', hours: 'hours', minutes: 'minutes', seconds: 'seconds',
+      countNote: 'until we see you',
+      countDone: 'Celebrated with joy',
+      menWho: "Men's celebration", menTitle: 'Monday, September 21',
+      menWhen: '7:00 PM',
+      menVenue: 'Al‑Bostan Café & Park, Daraya',
+      womenWho: "Women's celebration", womenTitle: 'Tuesday, September 22',
+      womenWhen: '7:00 PM',
+      womenVenue: 'Al‑Yazan Palace for Events, Daraya',
+      tentative: 'may change', map: 'Open in Maps →',
+      notice: 'Times are tentative and may shift slightly. This page is kept up to date, so check back before the day.',
+      closing: 'We can’t wait to see you there',
+      footer: 'Obeida & Mawadah · September 2026'
+    }
+  };
+
+  let lang = 'ar';
+  try {
+    const q = new URLSearchParams(location.search).get('lang');
+    if (q === 'en' || q === 'ar') lang = q;
+    else { const s = localStorage.getItem('wedding-lang'); if (s === 'en' || s === 'ar') lang = s; }
+  } catch (e) {}
+
+  const AR_DIGITS = '٠١٢٣٤٥٦٧٨٩';
+  const fmt = n => {
+    const s = String(n).padStart(2, '0');
+    return lang === 'ar' ? s.replace(/\d/g, d => AR_DIGITS[d]) : s;
+  };
+
+  function apply() {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('[data-i]').forEach(el => { el.textContent = T[lang][el.dataset.i]; });
+    document.querySelectorAll('.lang-toggle button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.l === lang)));
+    document.title = lang === 'ar' ? 'عبيدة ومودّة' : 'Obeida & Mawadah';
+    tick();
+  }
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.addEventListener('click', () => {
+    lang = b.dataset.l;
+    try { localStorage.setItem('wedding-lang', lang); } catch (e) {}
+    apply();
+  }));
+
+  // Sept 21, 2026, 7:00 PM Damascus time (UTC+3)
+  const target = new Date('2026-09-21T19:00:00+03:00').getTime();
+  const wrap = document.getElementById('count-wrap');
+  function tick() {
+    let diff = target - Date.now();
+    if (diff <= 0) { wrap.classList.add('is-done'); return; }
+    wrap.classList.remove('is-done');
+    const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+    const h = Math.floor(diff / 3600000); diff -= h * 3600000;
+    const m = Math.floor(diff / 60000); diff -= m * 60000;
+    const s = Math.floor(diff / 1000);
+    document.getElementById('d').textContent = fmt(d);
+    document.getElementById('h').textContent = fmt(h);
+    document.getElementById('m').textContent = fmt(m);
+    document.getElementById('s').textContent = fmt(s);
+  }
+  apply();
+  setInterval(tick, 1000);
+</script>
+
+</body>
+</html>
